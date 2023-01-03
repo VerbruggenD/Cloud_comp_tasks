@@ -1,0 +1,7 @@
+{
+    "source": "{% extends \"bootstrap/base.html\" %}\n{% block title %}Bootstrap page example{% endblock %}\n\n{% block styles %}\n{{ super() }}\n{% endblock %}\n\n{% block scripts %}\n{{ super() }}\n<script type=\"text/javascript\" charset=\"utf-8\">\n</script>\n{% endblock %}\n\n{% block content %}\n",
+    "header": "<div class=>\n<h1>My First Bootstrap Page</h1>\n<p>Resize this responsive page to see the effect!</p>\n</div>\n",
+    "body": "<div class=>\n</div>\n{% endblock %}",
+    "field_column": "<div class=>\n<h3>Column 1</h3>\n<p>Lorem ipsum dolor..</p>\n</div>\n",
+    "field_newrow": "<div class=>\n</div>\n"
+}
