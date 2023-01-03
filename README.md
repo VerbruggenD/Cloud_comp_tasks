@@ -4,11 +4,15 @@ This repo hosts my API tasks for the Masters course "Cloud computing" for Univer
 The instruction is to create 8 API with different languages, frameworks and methods. With 5x a service based on the combinations of the course and 3x a mix and match of language and method.
 
 ## 5x API structure from the course:
-  1. Rest with php in laravel 	-> fineCalculator with database
-	2. Soap with C# in .NET		    -> hybrid efficiency calc
-	3. Websocket with node.js	    -> group ride communication app
-	4. GraphQL with python		    -> movie and series search engine across streaming platforms
-	5. Protobuf with Java
+  1. Rest with php in laravel
+ 	- fineCalculator with database
+  2. Soap with C# in .NET
+  	- Hybrid efficiency calc
+  3. Websocket with node.js
+  	- group ride communication app
+  4. GraphQL with python
+	- movie and series search engine across streaming platforms
+5. Protobuf with Java
   
 ## 3x API structure not from the course:
   1. Rest met python: html for bootstrap generator
