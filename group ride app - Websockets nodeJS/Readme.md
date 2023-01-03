@@ -3,7 +3,7 @@ This communication platform is designed for car rides with multiple cars.
 You can send messages across cars, you can poll changes of destination or a waypoint for food, drinks and so forth.
 This API would then be integrated with a GPS app on mobile phones like waze or google maps for automatic change of course.
 
-## Fumctionality:
+## Functionality:
 - changing names
 - sending text messages
 - polling changes of destinations:
