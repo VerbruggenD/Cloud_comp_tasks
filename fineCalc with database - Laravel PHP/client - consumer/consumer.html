@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fine consumer</title>
+
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="functions.js"></script>
+</head>
+<body onload="return getMakes();">
+    <header>
+        <h1>Calculate the fine</h1>
+    </header>
+
+    <form action="">
+        <fieldset>
+            <table>
+                <tr>
+                    <td> <label for="carmakes" class="label">Manufacturer: </label> </td>
+                    <td>
+                        <input name="carmakes" list="makes" id="carmakes" onfocus="this.value =''" onchange="return getModels();"/>
+                        <datalist id="makes"></datalist>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <label for="carmodels" class="label">Model: </label></td>
+                    <td>
+                        <input name="carmodels" list="models" id="carmodels" onfocus="this.value =''"/>
+                        <datalist id="models"></datalist>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button 
+                            type="button"
+                            onclick="return calculateFine();"
+                        >Calculate Fine</button>
+                    </td>
+                    <td id="output"></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+    
+</body>
+</html>
