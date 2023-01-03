@@ -15,9 +15,9 @@ The instruction is to create 8 API with different languages, frameworks and meth
 5. Protobuf with Java
   
 ## 3x API structure not from the course:
-  	1. Rest met python: html for bootstrap generator
-	2. Rest met node.js en express	-> electric range calculation (based on Temp)
-	3. ..........
+1. Rest met python: html for bootstrap generator
+2. Rest met node.js en express	-> electric range calculation (based on Temp)
+3. 3. ..........
   
 ## Delivery of the APIs:
 - The laravel project including the SQL database needs to be presented during an online meet.
@@ -26,10 +26,10 @@ The instruction is to create 8 API with different languages, frameworks and meth
 - The remaining APIs only need to be zipped with minimal steps to extract them and run. If the process to deploy the API on a different device is to complex and prone for problems it is recommended to use a docker.
 
 ## 4x docker:
-  - Node.js rest: electric range calculation
-	- Node.js websockets: group ride communication app
-	- Python graphQL: movie and series search engine across streaming platforms
-	- Python rest: html for bootstrap generator
+- Node.js rest: electric range calculation
+- Node.js websockets: group ride communication app
+- Python graphQL: movie and series search engine across streaming platforms
+- Python rest: html for bootstrap generator
   
 ## General idea of the APIs, not consistend with the application (due to complexity and time limit)
 - FineCalculator with database:
