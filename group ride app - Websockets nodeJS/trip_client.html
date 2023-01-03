@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One trip plaform</title>
+    <script src="functions.js"></script>
+</head>
+
+<body onload="return openWS();">
+    <h1>One trip communication platform</h1>
+    <table>
+        <tr>
+            <td>
+                <fieldset>
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="driverName">Driver Name: </label>
+                            </td>
+                            <td>
+                                <input type="text" name="driverName" id="driverName">
+                            </td>
+                            <td>
+                                <button onclick="return sendName();">Set name</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="SocketCMD">Open or Close the socket: </label>
+                            </td>
+                            <td><button onclick="return closeWS();">Close</button></td>
+                            <td><button onclick="return openWS();">Open</button></td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </td>
+            <td>
+                <fieldset>
+                    <table>
+                        <tr>
+                            <th>Text messages</th>
+                        </tr>
+                        <tr>
+                            <td><label for="textMessage">Send a message: </label></td>
+                            <td>
+                                <input type="text" name="textMessage" id="textMessage">
+                            </td>
+                            <td>
+                                <button onclick="return sendText();">Send</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <textarea id="textMessages" rows=10></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <fieldset>
+                    <table>
+                        <tr>
+                            <th>Destination</th>
+                        </tr>
+                        <tr>
+                            <td><label for="mainDest">Set a destination</label></td>
+                            <td>
+                                <input type="text" name="mainDest" id="mainDest">
+                            </td>
+                            <td>
+                                <button onclick="return sendDestination('main');">Poll</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <textarea id="destinations" rows=1></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <fieldset>
+                    <table>
+                        <tr>
+                            <th>Waypoints</th>
+                        </tr>
+                        <tr>
+                            <td><label for="wayPointDest">Set a waypoint</label></td>
+                            <td>
+                                <input type="text" name="wayPointDest" id="wayPointDest">
+                            </td>
+                            <td>
+                                <button onclick="return sendDestination('wayPoint');">Poll</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <textarea id="waypoints" rows=1></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

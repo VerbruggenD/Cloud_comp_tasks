@@ -1,0 +1,27 @@
+functionality:
+    - changing the destination of gps
+    - polls
+    - messages
+    - request a wait
+
+connecting:
+    - adding userName
+    - sending person is connected
+
+disconnecting:
+    - sending person is disconnected (maybe because of service drops, Battery empty etc)
+
+reconnect:
+    - person is reconnected
+
+polling:
+    - asking question to everyone connected
+    - data:
+        - subject (question)
+        - action if confirmed
+        - action if rejected
+
+dataformats:
+    - places (class):
+        - description
+        - coordinates
