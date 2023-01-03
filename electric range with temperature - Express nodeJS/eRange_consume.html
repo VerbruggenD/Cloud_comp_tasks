@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>electric Range Converter Based on Conditions</title>
+    <script src="functions.js"></script>
+</head>
+<body>
+    <h1>Electric Range Converter Based on Conditions</h1>
+    <p><input id="read_button" type="button" onclick="location.href='info.html';" value="Read here why this convertor is usefull. "/>
+    </br></p>
+    <form action="">
+        <table>
+            <tr>
+                <td>
+                    <fieldset>
+                        <table>
+                            <th colspan="3">Average energy consumption data:</th>
+                            <tr>
+                                <td> <label for="avg_city">City/WLTP</label> </td>
+                                <td> <input type="text" name="avg_city" id="avg_city" placeholder="kWh/100 km" required> </td>
+                            </tr>
+                            <tr>
+                                <td> <label for="avg_country">Country</label> </td>
+                                <td> <input type="text" name="avg_country" id="avg_country" placeholder="kWh/100 km"> </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <p>Cars manufactured before the year 2020 should fill in City and Country. </br>
+                                        Newer cars should only use the WLTP input.</p>
+                                </td>
+                            </tr>
+                            <th colspan="2">Battery capacity under normal conditions: </th>
+                            <tr>
+                                <td> <label for="bat_cap">Battery capacity</label> </td>
+                                <td> <input type="text" name="bat_cap" id="bat_cap" placeholder="in Wh" required> </td>
+                                <td> <button type="button" onclick="return calcRange()">Submit</button></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <p>Fill in Battery capacity for normal weather conditions to estimate </br> 
+                                        the equivqlent capacity for current conditions.</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                </td>
+            </tr>
+        </table>
+        
+    </form>
+<div id="status"></div>
+
+
+</body>
+</html>
