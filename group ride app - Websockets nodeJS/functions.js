@@ -13,7 +13,7 @@ var msgToSend = { "type": "", "data": "" }
 
 function openWS() {
     if (mySocket == null || mySocket.readyState == WebSocket.CLOSED) {
-        mySocket = new WebSocket("ws://127.0.0.1:3001");
+        mySocket = new WebSocket("ws://127.0.0.1:80");
         mySocket.addEventListener('open',
             evt => {
                 //alert("Socket opened!");

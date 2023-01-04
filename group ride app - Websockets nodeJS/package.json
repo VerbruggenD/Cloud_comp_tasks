@@ -1,0 +1,15 @@
+{
+    "name": "group_ride_app",
+    "version": "1.0.0",
+    "description": "Group ride communication app",
+    "author": "Dieter Verbruggen <dieter.verbruggen@student.uhasselt.be>",
+    "main": "trip_server_node.js",
+    "scripts": {
+      "start": "node trip_server_node.js"
+    },
+    "dependencies": {
+      "express": "^4.18.2",
+      "ws": "^8.11.0",
+      "cors": "^2.8.5"
+    }
+  }

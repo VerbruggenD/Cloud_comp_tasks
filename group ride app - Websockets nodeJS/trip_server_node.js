@@ -1,5 +1,5 @@
 const WebSocket = require('ws')
-const wss = new WebSocket.Server({port:3001})
+const wss = new WebSocket.Server({port:80})
 // wss is the websocket server
 // ws is the websocket itself
 

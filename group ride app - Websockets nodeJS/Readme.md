@@ -3,6 +3,22 @@ This communication platform is designed for car rides with multiple cars.
 You can send messages across cars, you can poll changes of destination or a waypoint for food, drinks and so forth.
 This API would then be integrated with a GPS app on mobile phones like waze or google maps for automatic change of course.
 
+## Delivery
+
+This project is wrapped in a docker image which can be downloaded and ran with the following commands:
+
+````
+docker pull dieterverbruggen/cloud_computing:group_ride_app
+docker run -dp 80:80 dieterverbruggen/cloud_computing:group_ride_app
+````
+
+If you want to build it yourself use these commands:
+
+````
+docker build -t dieterverbruggen/cloud_computing:group_ride_app .
+docker run -dp 80:80 dieterverbruggen/cloud_computing:group_ride_app
+````
+
 ## Functionality:
 - changing names
 - sending text messages
