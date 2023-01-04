@@ -3,6 +3,12 @@ This repo hosts my API tasks for the Masters course "Cloud computing" for Univer
 
 The instruction is to create 8 API with different languages, frameworks and methods. With 5x a service based on the combinations of the course and 3x a mix and match of language and method.
 
+## Docker images
+The Docker images can be found on my docker hub repository "cloud_computing".
+https://hub.docker.com/repository/docker/dieterverbruggen/cloud_computing/
+All images are available in the same repo with the tags specifying which image it is.
+The individual pull requests are available in the readmes of the projects. The same goes for the other docker commands.
+
 ## 5x API structure from the course:
   1. Rest with php in laravel
  	- fineCalculator with database
