@@ -1,0 +1,14 @@
+{
+    "name": "calc_erange",
+    "version": "1.0.0",
+    "description": "calculating electric range for EVs based on outside temperature",
+    "author": "Dieter Verbruggen <dieter.verbruggen@student.uhasselt.be>",
+    "main": "calc_eRange_node.js",
+    "scripts": {
+      "start": "node calc_eRange_node.js"
+    },
+    "dependencies": {
+      "express": "^4.18.2",
+      "cors": "^2.8.5"
+    }
+  }
