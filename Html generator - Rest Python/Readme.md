@@ -2,6 +2,7 @@
 This project generates a html template using code snippets with the selected rows and columns in bootstrap.
 The actual field are not filled with buttons or textfields, but this was the idea.
 
+## Delivery
 Delivery of the API is via a docker image, you can use the dockerfile or use this pull command for docker hub:
 
 ````
@@ -16,6 +17,7 @@ docker build -t dieterverbruggen/cloud_computing:html_generator .
 docker run -dp 8000:8000 dieterverbruggen/cloud_computing:html_generator
 ```
 
+## Information about the project
 The structure of the bootstrap code looks like this:
 
 ````
