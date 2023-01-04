@@ -3,7 +3,7 @@ This API calculates the range of a electric powered vehicle based on the outside
 Normally, the temperature would be loaded using a weather service API. In this case, the temperature is a random generated value between -10 and 35 degrees Celsius.
 
 ## Delivery
-The method of delivery is a docker container, the methods to use it with docker hub:
+The method of delivery is a docker container, the commands to use it with docker hub:
 
 ````
 docker pull dieterverbruggen/cloud_computing:calc_e_range

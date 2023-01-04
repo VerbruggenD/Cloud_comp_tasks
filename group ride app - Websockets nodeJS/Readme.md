@@ -5,7 +5,7 @@ This API would then be integrated with a GPS app on mobile phones like waze or g
 
 ## Delivery
 
-This project is wrapped in a docker image which can be downloaded and ran with the following commands:
+This project is wrapped in a docker image on docker hub which can be downloaded and ran with the following commands:
 
 ````
 docker pull dieterverbruggen/cloud_computing:group_ride_app
