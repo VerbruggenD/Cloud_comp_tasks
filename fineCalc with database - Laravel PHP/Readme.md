@@ -11,3 +11,5 @@ Only the added code is added to this repository to keep the size down.
     - getting the average fine for that make and adding the offset of the model
     - only a limited amount of cars are added to the database but the results are a representation of the real life scenario
 
+## Delivery
+This project will only be demonstrated in an online meeting, it won't work when trying to run it from this repository.
