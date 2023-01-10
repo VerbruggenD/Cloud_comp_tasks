@@ -19,6 +19,7 @@ The individual pull requests are available in the readmes of the projects. The s
   4. GraphQL with python
 	- movie and series search engine across streaming platforms
 5. Protobuf with Java
+	- smart home power management
   
 ## 3x API structure not from the course:
 1. Rest met python: html for bootstrap generator
