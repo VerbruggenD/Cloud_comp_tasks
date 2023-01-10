@@ -78,3 +78,10 @@ The individual pull requests are available in the readmes of the projects. The s
   - By searching the services from one engine the user experience can be dramatically improved.
   - The content will still be launched on the corresponding service.
   - This project only searches the content on fake streaming services. Return a fake link of the content.
+
+- Smart power management service:
+  - This API tries to solve one of the problems with solar production being in the day and most people work in the day
+  - Also tries to solve a big problem in Belgium called "capaciteits tarief" for billing more for energy in peak moments
+  - A faked implementation of devices being turned on/off based on solar production and power consumption
+  - Based on a threshold of the device and difference in energy the device will turn on and off
+  - Important datafield is 'critical' some devices use a cycle and may not be turned whenever
