@@ -28,6 +28,8 @@ docker run -dp 8000:8000 dieterverbruggen/cloud_computing:media_search_engine
   - Key words of the disciption
   - Categories
   - Only the title search is implemented but this could be expanded to the other features.
+- Recommending titles across all platforms (not implemented)
+- Caching frequently searched items (not implemented)
 
 This is a query for 3 searches for the interface.
 http://127.0.0.1:8000/graphql
