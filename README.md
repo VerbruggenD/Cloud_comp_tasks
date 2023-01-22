@@ -39,19 +39,19 @@ The individual pull requests are available in the readmes of the projects. The s
 - Python rest: html for bootstrap generator
   
 ## General idea of the APIs, not consistend with the application (due to complexity and time limit)
-1. FineCalculator with database:
+1 FineCalculator with database:
   - Calculating fines for the driver's projected income based on value of the car.
   - To make the process of fining people more faire based on income, to eliminate the lawlessnes for the rich.
   - In the project included is a database and extensive consumer where the user can select the make and model of the care with selection boxes.
   
-2. Hybrid efficiency calculator:
+2 Hybrid efficiency calculator:
   - Tries to solve the problem of todays age that the electric consumption of hybrid cars is not so efficient than manufacturers claim.
   - By using learned data over a period it is possible to calculate the most efficient method of driving based on distance in a certain speed range.
   - Is very important because the limits of todays technologies, currently the mode of electric and combined must be selected manually.
   - In the project included is a method to calc which mode is more efficient based on range data and a trip consisting of:
   - Km's on highway, city and country
 
-3. Group ride communication app:
+3 Group ride communication app:
   - Is a way of communicating when a few cars are doing a group ride or trip.
   - It is possible to send messages.
   - It is possible to poll for a change of plans, which are:
@@ -59,7 +59,7 @@ The individual pull requests are available in the readmes of the projects. The s
    	- Request to change the destination
   - Then based on the outcome of the poll the destination in GPS can be automatically changed (this is not implemented).
   
-4. Html for bootstrap generator:
+4 Html for bootstrap generator:
   - Help developers to generate a standard template for their website to accelerate the development.
   - With the use of bootstrap a structure is made using rows and columns.
   - In the fields are the inputs and outputs placed or styling like pictures.
@@ -67,23 +67,23 @@ The individual pull requests are available in the readmes of the projects. The s
   - In this project is the actual fields not implemented due to complexity and time limit but can be integrated in the same way.
   - The instructions for generation are as followed, ['row', 'col', 'row', 'col', 'end'] where the order of these instruction defines the structure.
   
-5. Electric range calculator:
+5 Electric range calculator:
   - This API tries to calculate a very important flaw of electric and hybrid vehicules, the reduced range due to weather conditions.
   - It is very important to know the range based on temperature outside.
   - This can give more information about which heating options can be used for your trip to ensure a comfortable ride while still reaching the destination.
   - The implementation of the heating options is not implemented, only the reduction in apparent battery capacity.
   
-6. Movie and series search engine across streaming platforms:
+6 Movie and series search engine across streaming platforms:
   - This API tries to solve the hassle of having multiple subsciptions to streaming services but not knowing wat you want to watch.
   - By searching the services from one engine the user experience can be dramatically improved.
   - The content will still be launched on the corresponding service.
   - This project only searches the content on fake streaming services. Return a fake link of the content.
 
-7. Smart power management service:
+7 Smart power management service:
   - This API tries to solve one of the problems with solar production being in the day and most people work in the day
   - Also tries to solve a big problem in Belgium called "capaciteits tarief" for billing more for energy in peak moments
   - A faked implementation of devices being turned on/off based on solar production and power consumption
   - Based on a threshold of the device and difference in energy the device will turn on and off
   - Important datafield is 'critical' some devices use a cycle and may not be turned whenever
 
-8. Hier nog iets
+8 Hier nog iets
