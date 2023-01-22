@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <title>Smart Hybrid range efficiency</title>
+    </head>
+
+    <body>
+        <div class="jumbotron text-center">
+            <h1>Smart hybrid efficiency calculator</h1>
+        </div>
+        <div class="container">
+            <form action="consumer_server.php" method="post">
+                <div class="form-group">
+                    <label for="name">Electric energy consumption:</label>
+                    <input type="text" class="form-control" id="e_city" name="e_city" placeholder="city: kWh/100km">
+                    <input type="text" class="form-control" id="e_country" name="e_country" placeholder="country: kWh/100km">
+                    <input type="text" class="form-control" id="e_highway" name="e_highway" placeholder="highway: kWh/100km">
+                    <input type="text" class="form-control" id="e_capacity" name="e_capacity" placeholder="capacity: kWh">
+                </div>
+                <div class="form-group">
+                    <label for="email">Petrol energy consumption:</label>
+                    <input type="text" class="form-control" id="p_city" name="p_city" placeholder="city: l/100km">
+                    <input type="text" class="form-control" id="p_country" name="p_country" placeholder="country: l/100km">
+                    <input type="text" class="form-control" id="p_highway" name="p_highway" placeholder="highway: l/100km">
+                    <input type="text" class="form-control" id="p_capacity" name="p_capacity" placeholder="capacity: l">
+                </div>
+                <div class="form-group">
+                    <label for="message">Planned trip:</label>
+                    <input type="text" class="form-control" id="km_city" name="km_city" placeholder="km">
+                    <input type="text" class="form-control" id="km_country" name="km_country" placeholder="km">
+                    <input type="text" class="form-control" id="km_highway" name="km_highway" placeholder="km">
+                </div>
+                <div class="form-group">
+                    <label for="message">Energy price:</label>
+                    <input type="text" class="form-control" id="e_price" name="e_price" placeholder="electric: &euro;/kWh">
+                    <input type="text" class="form-control" id="p_price" name="p_price" placeholder="petrol: &euro;/l">
+                </div>
+                <button type="submit" class="btn btn-primary">Make Hybrid</button>
+            </form>
+        </div>
+    </body>
+</html>

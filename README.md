@@ -5,7 +5,8 @@ The instruction is to create 8 API with different languages, frameworks and meth
 
 ## Docker images
 The Docker images can be found on my docker hub repository "cloud_computing".
-https://hub.docker.com/repository/docker/dieterverbruggen/cloud_computing/
+`https://hub.docker.com/repository/docker/dieterverbruggen/cloud_computing/`
+
 All images are available in the same repo with the tags specifying which image it is.
 The individual pull requests are available in the readmes of the projects. The same goes for the other docker commands.
 
@@ -23,8 +24,8 @@ The individual pull requests are available in the readmes of the projects. The s
   
 ## 3x API structure not from the course:
 1. Rest met python: html for bootstrap generator
-2. Rest met node.js en express	-> electric range calculation (based on Temp)
-3. 3. ..........
+2. Rest met node.js en express: Electric range calculation (based on Temp)
+3. Websockets with SocketIO with Flask and Bootstrap: Traffic monitoring dashboard with
   
 ## Delivery of the APIs:
 - The laravel project including the SQL database needs to be presented during an online meet.
@@ -86,4 +87,8 @@ The individual pull requests are available in the readmes of the projects. The s
   - Based on a threshold of the device and difference in energy the device will turn on and off
   - Important datafield is 'critical' some devices use a cycle and may not be turned whenever
 
-8 Hier nog iets
+8 Traffic monitoring service
+  - This API tries to give an easy central interface for all traffic feedback systems, with the most obvious waze and the police.
+  - Users can then subscribe to an API from the instance but can also share their own data to the platform (this is not implemented and should be done with a standalone API).
+  - The possible users are emergency services (they share info between eachother, but can use a different approach for civilian data). But also trucking companies and similar who use dispatch stations for giving updates.
+  - Reliability of the data is ensured by indicating the status of the connection. This could be improved by also giving current statusses of the individual APIs of the external services.
