@@ -1,0 +1,136 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}Bootstrap page example{% endblock %}
+
+{% block styles %}
+{{ super() }}
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function () {
+        //var socket = io.connect('http://' + document.domain + ':' + location.port, {secure: true});
+        var socket = io.connect('/');
+
+        socket.emit('test');    // werkt
+
+        $('#connectButton').click(function (event) {     // werkt
+            socket.emit('test_json', JSON.stringify('testjeeee'));
+        })
+
+        $('.selection').change(function (event) {
+            var wazeSelection = document.getElementById('waze').checked;
+            var sensorsSelection = document.getElementById('sensors').checked;
+            var autoCameraSelection = document.getElementById('autoCamera').checked;
+            var policeSelection = document.getElementById('police').checked;
+            var publicTransSelection = document.getElementById('publicTrans').checked;
+
+            var jsonObject = JSON.stringify({waze: wazeSelection, sensors: sensorsSelection, 
+                camera: autoCameraSelection, police: policeSelection,publicTransport: publicTransSelection});
+            
+            //console.log(jsonObject);
+
+            socket.emit('srcSelect', jsonObject);
+        })
+
+        socket.on('message', function (data) {
+            //console.log(data);
+            data = JSON.parse(data);
+            var text = data['apiName'] + ' ' + data['location'] + ' ' + data['problemType'] + ' ' + data['timestamp'];
+            console.log(text);
+            var $textarea = $('#trafficInfo');
+            $textarea.val($textarea.val() + text + '\n');
+        })
+
+        socket.on('disconnect', function () {
+            updateConnectionStatus(false);
+        })
+
+        socket.on('connect', function () {
+            updateConnectionStatus(true);
+            var socket = io.connect('/');
+        })
+
+        var connectionStatus = document.getElementById("connection-status");
+
+        function updateConnectionStatus(status) {
+            if (status) {
+                connectionStatus.className = "text-success";
+                connectionStatus.innerHTML = "Connected";
+            } else {
+                connectionStatus.className = "text-danger";
+                connectionStatus.innerHTML = "Disconnected";
+            }
+        }
+
+        // Check if the browser supports the `navigator.onLine` property
+        if ("onLine" in navigator) {
+            // If the browser supports the property, use it to check the connection status
+            updateConnectionStatus(navigator.onLine);
+
+            // Listen for changes in the connection status
+            window.addEventListener("online", function () {
+                updateConnectionStatus(true);
+            });
+            window.addEventListener("offline", function () {
+                updateConnectionStatus(false);
+            });
+        } else {
+            // If the browser doesn't support the property, assume the user is always online
+            updateConnectionStatus(true);
+        }
+    });
+
+</script>
+</script>
+{% endblock %}
+
+{% block content %}
+<div class="jumbotron text-center">
+    <h1>Traffic dashboard</h1>
+    <p>Template generated with html for bootstrap generator API</p>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <h3>Selecting data sources</h3>
+            <div class="form-check form-switch">
+                <input class="selection form-check-input" type="checkbox" id="waze" checked>
+                <label class="form-check-label" for="waze">Waze information</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="selection form-check-input" type="checkbox" id="sensors" checked>
+                <label class="form-check-label" for="sensors">Crosspoint sensors</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="selection form-check-input" type="checkbox" id="autoCamera" checked>
+                <label class="form-check-label" for="autoCamera">Automated camera traffic jam detection</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="selection form-check-input" type="checkbox" id="police" checked>
+                <label class="form-check-label" for="police">Police information</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="selection form-check-input" type="checkbox" id="publicTrans" checked>
+                <label class="form-check-label" for="publicTrans">Public transportation information</label>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <h3>Connection status</h3>
+            <div>
+                <div id="connection-status" class="text-danger"></div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <h3>Traffic information</h3>
+            <textarea name="trafficInfo" id="trafficInfo" cols="100" rows="20"></textarea>
+            <button id="connectButton">Connect to server</button>
+        </div>
+    </div>
+</div>
+{% endblock %}
